@@ -1,7 +1,18 @@
 import "../styles.css";
 import { AlertCircle, Clock, CheckCircle } from "lucide-react";
+import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   return (
     <div>
       <div className="separator"></div>
@@ -148,6 +159,218 @@ function App() {
           <div className="dispositivos-implementation">
             <h2 className="subtitulo-seccion">Implementación</h2>
 
+            <div className="implementacion-card">
+              <div className="implementacion-card-text">
+                <h3>Manejo de los datos</h3>
+                <p>
+                  El primer paso que decidí tomar al iniciar el proyecto fue
+                  asegurarme de tener bien definida la estructura y la obtención
+                  de los datos. Para ello, abrí MySQL Server y comencé a revisar
+                  las estructuras de las tablas existentes. Mi atención se
+                  centró principalmente en una tabla llamada{" "}
+                  <strong>dispositivos</strong>, en la cual encontré un campo
+                  útil llamado <em>fechaCompra</em>. Sin embargo, al analizar
+                  los registros, noté que en la mayoría de los casos este campo
+                  estaba vacío (NULL), por lo que no podía basar el análisis
+                  únicamente en él.
+                </p>
+                <p>
+                  Ante esta situación, opté por crear una nueva tabla llamada{" "}
+                  <strong>DispositivosModelos</strong>. El objetivo era
+                  registrar todos los modelos disponibles en la base de datos
+                  junto con su fecha de lanzamiento y otros datos relevantes. De
+                  esta manera, si el campo <em>fechaCompra</em> estaba ausente,
+                  podríamos inferir un estado aproximado a partir de la fecha de
+                  lanzamiento del modelo.
+                </p>
+                <p>
+                  Una vez definida la fuente de datos, procedí a crear los
+                  campos <strong>estadoRenovacion</strong> y{" "}
+                  <strong>fechaRenovacion</strong>, que permiten realizar un
+                  seguimiento más preciso del ciclo de vida de los dispositivos.
+                </p>
+              </div>
+              <div className="implementacion-card-image">
+                <img
+                  src="/project-images/dispositivos/manejoDatos.png"
+                  alt="Implementación de Dispositivos"
+                />
+              </div>
+            </div>
+
+            <div className="implementacion-card">
+              <div className="implementacion-card-text">
+                <h3>Trato Datos en Backend</h3>
+                <p>
+                  Como se explicó anteriormente, los datos en el backend han
+                  sido procesados utilizando .NET. Para exponer estos datos a la
+                  vista, creé un endpoint con la ruta{" "}
+                  <code>/api/dispositivo/id</code>, el cual se encarga de
+                  obtener la información de un dispositivo específico.
+                </p>
+
+                <p>
+                  Esta API recupera los datos desde la tabla{" "}
+                  <strong>Dispositivos</strong> y los almacena en una colección
+                  de objetos del tipo <code>Dispositivo</code>. Esto sería
+                  suficiente si los datos estuvieran correctamente estructurados
+                  desde el principio. Sin embargo, como fue necesario crear la
+                  tabla <strong>DispositivosModelos</strong>, también generamos
+                  una segunda colección basada en un modelo auxiliar llamado{" "}
+                  <code>DispositivoEstadoRenovacion</code>. Este modelo incluye
+                  los campos <em>fechaCompra</em>, <em>fechaRenovacion</em> y{" "}
+                  <em>estadoRenovacion</em>.
+                </p>
+
+                <p>
+                  Finalmente, se realiza un recorrido sobre la colección
+                  principal de dispositivos. Por cada uno, se busca una
+                  coincidencia en la colección auxiliar. Si se encuentra,
+                  significa que el dispositivo no tenía una <em>fechaCompra</em>{" "}
+                  original válida, por lo tanto, se actualizan sus campos{" "}
+                  <em>estadoRenovacion</em>, <em>fechaRenovacion</em> y{" "}
+                  <em>fechaCompra</em> con los valores provenientes de la
+                  segunda colección. En caso de no encontrar coincidencia, estos
+                  campos se mantienen vacíos.
+                </p>
+              </div>
+              <div className="implementacion-card-image">
+                <img
+                  src="/project-images/dispositivos/datosBackend.png"
+                  alt="Implementación de Dispositivos"
+                />
+              </div>
+            </div>
+
+            <div className="implementacion-card">
+              <div className="implementacion-card-text">
+                <h3>Trato Datos en FrontEnd</h3>
+                <p>
+                  Una vez tenemos los datos correctamente estructurados y
+                  expuestos a través del endpoint, el siguiente paso es
+                  implementar la lógica en el frontend. Para ello, utilizamos
+                  Vue.js, que nos permite crear una interfaz de usuario dinámica
+                  y reactiva.
+                </p>
+
+                <p>
+                  En el componente Vue, cargaremos todos los datos mediante el
+                  Mounted Hook, en él llamamos al metodo refreshTable() que se
+                  encarga de realizar una petición al endpoint que hemos creado,
+                  obteniendo todos los estados y fechas correctamente
+                  estructuradas. También creamos metodos para calcular la
+                  cantidad de dispositivos a tiempo real gracias a un filer por
+                  estadoRenovacion y su length. Esto lo haremos con el Total,
+                  Cambio Proximo y Cambio Urgente
+                </p>
+
+                <p>
+                  Para mostrar los datos, actualizaremos el Datatable añadiendo
+                  el campo estadoRenovacion. Además, añadiremos un filtro para
+                  que el usuario pueda ver los dispositivos por estado de
+                  renovación, lo que facilita la identificación rápida de
+                  aquellos que necesitan atención inmediata.
+                </p>
+
+                <p>
+                  Por último crearemos 3 Divs que mostraran las estadisticas
+                  anteriomente obtenidas, dos de ellos, serán Cambio Proximo y
+                  Cambio urgente por lo que haremos que sean clicables y
+                  muestren un dialog con toda la infromacion necesaria
+                  estructurado de forma funcional y estetica.
+                </p>
+              </div>
+              <div className="implementacion-card-image">
+                <img
+                  src="/project-images/dispositivos/DatosFrontend.png"
+                  alt="Implementación de Dispositivos"
+                />
+              </div>
+            </div>
+            <div className="implementacion-card">
+              <div className="implementacion-card-text">
+                <h3>Implementaciones Extras</h3>
+                <p>
+                  Ya finalizado el proyecto, quería acabar de pulirlo y
+                  agregarle algo que destacase y lo escalase a otro nivel, por
+                  esta misma razon decidi implementar dos graficos y un popup
+                  para ver la infromacion del dispositivo que cliquees.
+                </p>
+
+                <p>
+                  Para poder crear los graficos, utilice la libreria Chart.js,
+                  que me permite crear graficos de forma sencilla y rapida. En
+                  este caso, he creado dos graficos, uno en forma de pie que
+                  muestra la cantidad de tipos de dispositivos a renovar y otro
+                  de barras que mustra la cantidad de dispositivos que deberian
+                  de haber sido cambiados al largo de los años.
+                </p>
+
+                <p>
+                  Por otro lado como he dejado caer anteriormente, en su momento
+                  añadí infromacion extra a la tabla DispositivosModelos, por lo
+                  que he decidido crear un popup que muestre toda la infromacion
+                  del dispositivo que cliquees, de esta forma el usuario puede
+                  ver toda la infromacion del dispositivo sin necesidad de salir
+                  de la pantalla principal.
+                </p>
+              </div>
+              <div className="implementacion-card-image">
+                <img
+                  src="/project-images/dispositivos/implementacionesExtras.png"
+                  alt="Implementación de Dispositivos"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="carousel-section">
+            <h2 className="subtitulo-seccion">Galería de Imágenes</h2>
+            <div className="carousel-wrapper">
+              <Slider {...settings}>
+                <div>
+                  <h3>Vista General</h3>
+                  <img
+                    src="/project-images/dispositivos/DispositivosCarrousell/dispositivos_list.PNG"
+                    alt="Implementación de Dispositivos"
+                  />
+                </div>
+                <div>
+                  <h3>Dialog Cambio Urgente</h3>
+                  <img
+                    src="/project-images/dispositivos/DispositivosCarrousell/dispositivos_cambiourgente1.PNG"
+                    alt="Implementación de Dispositivos"
+                  />
+                </div>
+                <div>
+                  <h3>Dialog Cambio Urgente</h3>
+                  <img
+                    src="/project-images/dispositivos/DispositivosCarrousell/dispositivos_cambiourgente2.PNG"
+                    alt="Implementación de Dispositivos"
+                  />
+                </div>
+                <div>
+                  <h3>Dialog Próximo Cambio</h3>
+                  <img
+                    src="/project-images/dispositivos/DispositivosCarrousell/dispositivos_proximocambio.PNG"
+                    alt="Implementación de Dispositivos"
+                  />
+                </div>
+                <div>
+                  <h3>Dialog Próximo Cambio</h3>
+                  <img
+                    src="/project-images/dispositivos/DispositivosCarrousell/dispositivos_proximocambio2.PNG"
+                    alt="Implementación de Dispositivos"
+                  />
+                </div>
+                <div>
+                  <h3>Popup Dispositivo</h3>
+                  <img
+                    src="/project-images/dispositivos/DispositivosCarrousell/dispositivoPopup.PNG"
+                    alt="Implementación de Dispositivos"
+                  />
+                </div>
+              </Slider>
+            </div>
           </div>
         </div>
       </main>
