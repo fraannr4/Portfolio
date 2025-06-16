@@ -1,7 +1,9 @@
 import "../styles.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function App() {
+  const navigate = useNavigate();
   const proyectos = [
     {
       id: 1,
@@ -52,7 +54,7 @@ function App() {
           </div>
           <div className="header-buttons">
             <button>Ver mis Proyectos</button>
-            <button>Contactarme</button>
+            <button onClick={() => navigate("/Contact")}>Contactarme</button>
           </div>
         </div>
       </header>
