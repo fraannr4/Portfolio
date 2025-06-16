@@ -96,11 +96,6 @@ function App() {
                 las tablas origen.
               </p>
             </div>
-            <img
-              src="/project-images/extranet/flecha-verde.png"
-              alt="Flecha"
-              className="flecha-horizontal"
-            />
 
             <div className="fase-card">
               <h3>2. API en .NET</h3>
@@ -110,11 +105,6 @@ function App() {
                 permiten acceder a los datos desde otras aplicaciones.
               </p>
             </div>
-            <img
-              src="/project-images/extranet/flecha-verde.png"
-              alt="Flecha"
-              className="flecha-horizontal"
-            />
 
             <div className="fase-card">
               <h3>3. Validación con Swagger</h3>
@@ -124,11 +114,6 @@ function App() {
                 estructura de los datos cumpliera los requisitos funcionales.
               </p>
             </div>
-            <img
-              src="/project-images/extranet/flecha-verde.png"
-              alt="Flecha"
-              className="flecha-horizontal"
-            />
 
             <div className="fase-card">
               <h3>4. Lógica de Ficha</h3>
@@ -139,24 +124,14 @@ function App() {
                 usuario.
               </p>
             </div>
-            <img
-              src="/project-images/extranet/flecha-verde.png"
-              alt="Flecha"
-              className="flecha-horizontal"
-            />
             <div className="fase-card">
               <h3>5. Frontend</h3>
               <p>
-                Se construyó la interfaz con <strong>React</strong>, integrando
+                Se construyó la interfaz con <strong>VUE</strong>, integrando
                 diseño responsive, filtros interactivos y visualización de
                 datos, manteniendo la coherencia con el portal existente.
               </p>
             </div>
-            <img
-              src="/project-images/extranet/flecha-verde.png"
-              alt="Flecha"
-              className="flecha-horizontal"
-            />
 
             <div className="fase-card">
               <h3>6. Exportar a Excel</h3>

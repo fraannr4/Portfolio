@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import ProyectoDispositivos from "./pages/ProyectoDispositivos";
 import ProyectoExtranet from "./pages/ProyectoExtranet";
 import Footer from "./Footer";
+import ProyectoPlantillas from "./pages/ProyectoPlantillas";
 function App() {
   return (
     <>
@@ -17,6 +18,10 @@ function App() {
         <Route
           path="/proyecto/proveedoresExtranet"
           element={<ProyectoExtranet />}
+        />
+        <Route
+          path="/proyecto/proveedoresPlantillas"
+          element={<ProyectoPlantillas />}
         />
         {/* <Route path="/proyecto/extranet" element={<ProyectoExtranet />} />
       <Route path="/proyecto/plantillas" element={<ProyectoPlantillas />} />

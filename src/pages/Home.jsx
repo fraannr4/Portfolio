@@ -23,7 +23,7 @@ function App() {
       descripcion:
         "Listado, Detalles de Proveedores y Visualización, Creación y Edición de plantillas",
       imagen: "project-images/proveedores_plantillas.png",
-      ruta: "/proyecto/plantillas",
+      ruta: "/proyecto/proveedoresPlantillas",
     },
     {
       id: 4,
