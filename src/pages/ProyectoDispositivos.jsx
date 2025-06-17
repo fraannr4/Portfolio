@@ -282,7 +282,7 @@ function App() {
               </div>
               <div className="implementacion-card-image">
                 <img
-                  src={process.env.PUBLIC_URL + "/project-images/dispositivos/DatosFrontend.png"}
+                  src={process.env.PUBLIC_URL + "/project-images/dispositivos/datosFrontend.png"}
                   alt="Implementación de Dispositivos"
                 />
               </div>
