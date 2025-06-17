@@ -46,7 +46,9 @@ function App() {
             </h3>
           </div>
           <div className="header-buttons">
-            <button onClick={() => navigate("/Projects")}>Ver mis Proyectos</button>
+            <button onClick={() => navigate("/Projects")}>
+              Ver mis Proyectos
+            </button>
             <button onClick={() => navigate("/Contact")}>Contactarme</button>
           </div>
         </div>
@@ -95,7 +97,10 @@ function App() {
                   <h3>{proyecto.titulo}</h3>
                 </div>
                 <div className="project-body">
-                  <img src={proyecto.imagen} alt={proyecto.titulo} />
+                  <img
+                    src={process.env.PUBLIC_URL + "/" + proyecto.imagen}
+                    alt={proyecto.titulo}
+                  />
                 </div>
                 <div className="project-footer">
                   <p>{proyecto.descripcion}</p>
