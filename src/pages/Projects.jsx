@@ -45,7 +45,7 @@ function App() {
 
       <div className="contact-main">
         {proyectos.map((proyecto) => (
-          <Link key={proyecto.id} to={proyecto.ruta} className="project-card-dark">
+          <Link key={proyecto.id} to={proyecto.ruta} className="project-card-dark" style={{ marginBottom: "30px" }}>
             <div className="project-header-dark">
               <h3>{proyecto.titulo}</h3>
             </div>

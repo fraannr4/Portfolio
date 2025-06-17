@@ -7,8 +7,8 @@ import Footer from "./Footer";
 import ProyectoPlantillas from "./pages/ProyectoPlantillas";
 import ProyectoFirma from "./pages/ProyectoFirma";
 import Projects from "./pages/Projects";
-
 import Contact from "./pages/Contact";
+
 function App() {
   return (
     <>
