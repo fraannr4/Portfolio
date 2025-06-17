@@ -192,7 +192,7 @@ function App() {
               </div>
               <div className="implementacion-card-image">
                 <img
-                  src="/project-images/dispositivos/manejoDatos.png"
+                  src={process.env.PUBLIC_URL + "/project-images/dispositivos/manejoDatos.png"}
                   alt="Implementación de Dispositivos"
                 />
               </div>
@@ -236,7 +236,7 @@ function App() {
               </div>
               <div className="implementacion-card-image">
                 <img
-                  src="/project-images/dispositivos/datosBackend.png"
+                  src={process.env.PUBLIC_URL + "/project-images/dispositivos/datosBackend.png"}
                   alt="Implementación de Dispositivos"
                 />
               </div>
@@ -282,7 +282,7 @@ function App() {
               </div>
               <div className="implementacion-card-image">
                 <img
-                  src="/project-images/dispositivos/DatosFrontend.png"
+                  src={process.env.PUBLIC_URL + "/project-images/dispositivos/DatosFrontend.png"}
                   alt="Implementación de Dispositivos"
                 />
               </div>
@@ -317,7 +317,7 @@ function App() {
               </div>
               <div className="implementacion-card-image">
                 <img
-                  src="/project-images/dispositivos/implementacionesExtras.png"
+                  src={process.env.PUBLIC_URL + "/project-images/dispositivos/implementacionesExtras.png"}
                   alt="Implementación de Dispositivos"
                 />
               </div>
@@ -330,42 +330,42 @@ function App() {
                 <div>
                   <h3>Vista General</h3>
                   <img
-                    src="/project-images/dispositivos/DispositivosCarrousell/dispositivos_list.PNG"
+                    src={process.env.PUBLIC_URL + '/project-images/dispositivos/DispositivosCarrousell/dispositivos_list.PNG'} 
                     alt="Implementación de Dispositivos"
                   />
                 </div>
                 <div>
                   <h3>Dialog Cambio Urgente</h3>
                   <img
-                    src="/project-images/dispositivos/DispositivosCarrousell/dispositivos_cambiourgente1.PNG"
+                    src={process.env.PUBLIC_URL + "/project-images/dispositivos/DispositivosCarrousell/dispositivos_cambiourgente1.PNG"}
                     alt="Implementación de Dispositivos"
                   />
                 </div>
                 <div>
                   <h3>Dialog Cambio Urgente</h3>
                   <img
-                    src="/project-images/dispositivos/DispositivosCarrousell/dispositivos_cambiourgente2.PNG"
+                    src={process.env.PUBLIC_URL + "/project-images/dispositivos/DispositivosCarrousell/dispositivos_cambiourgente2.PNG"}
                     alt="Implementación de Dispositivos"
                   />
                 </div>
                 <div>
                   <h3>Dialog Próximo Cambio</h3>
                   <img
-                    src="/project-images/dispositivos/DispositivosCarrousell/dispositivos_proximocambio.PNG"
+                    src={process.env.PUBLIC_URL + "/project-images/dispositivos/DispositivosCarrousell/dispositivos_proximocambio.PNG"}
                     alt="Implementación de Dispositivos"
                   />
                 </div>
                 <div>
                   <h3>Dialog Próximo Cambio</h3>
                   <img
-                    src="/project-images/dispositivos/DispositivosCarrousell/dispositivos_proximocambio2.PNG"
+                    src={process.env.PUBLIC_URL + "/project-images/dispositivos/DispositivosCarrousell/dispositivos_proximocambio2.PNG"}
                     alt="Implementación de Dispositivos"
                   />
                 </div>
                 <div>
                   <h3>Popup Dispositivo</h3>
                   <img
-                    src="/project-images/dispositivos/DispositivosCarrousell/dispositivoPopup.PNG"
+                    src={process.env.PUBLIC_URL + "/project-images/dispositivos/DispositivosCarrousell/dispositivoPopup.PNG"}
                     alt="Implementación de Dispositivos"
                   />
                 </div>

@@ -40,7 +40,7 @@ function App() {
 
       <div className="contact-main">
         <div className="img-contact-column">
-          <img src="/icon/icon_contact_fran.png" alt="Avatar" />
+          <img src={process.env.PUBLIC_URL + '/icon/icon_contact_fran.png'} alt="Avatar" />
         </div>
 
         <div className="form-contact-column">

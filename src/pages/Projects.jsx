@@ -50,7 +50,7 @@ function App() {
               <h3>{proyecto.titulo}</h3>
             </div>
             <div className="project-body">
-              <img src={proyecto.imagen} alt={proyecto.titulo} />
+                <img src={process.env.PUBLIC_URL + '/' + proyecto.imagen} alt={proyecto.titulo} />
             </div>
             <div className="project-footer-dark">
               <p>{proyecto.descripcion}</p>

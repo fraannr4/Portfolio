@@ -163,7 +163,7 @@ function App() {
               </div>
               <div className="implementacion-card-image">
                 <img
-                  src="/project-images/firma/implementacion/manejoDatos.png"
+                  src={process.env.PUBLIC_URL + "/project-images/firma/implementacion/manejoDatos.png"}
                   alt="Implementación de Firma"
                 />
               </div>
@@ -193,7 +193,7 @@ function App() {
 
               <div className="implementacion-card-image">
                 <img
-                  src="/project-images/firma/implementacion/backend.png"
+                  src={process.env.PUBLIC_URL + "/project-images/firma/implementacion/backend.png"}
                   alt="Implementación de Firma"
                 />
               </div>
@@ -229,7 +229,7 @@ function App() {
               </div>
               <div className="implementacion-card-image">
                 <img
-                  src="/project-images/firma/implementacion/frontend.png"
+                  src={process.env.PUBLIC_URL + "/project-images/firma/implementacion/frontend.png"}
                   alt="Implementación de Firma"
                 />
               </div>
@@ -242,14 +242,14 @@ function App() {
                 <div>
                   <h3>Firma Con Foto</h3>
                   <img
-                    src="/project-images/firma/Firma.PNG"
+                    src={process.env.PUBLIC_URL + "/project-images/firma/Firma.PNG"}
                     alt="Firma con foto"
                   />
                 </div>
                 <div>
                   <h3>Firma Sin Foto</h3>
                   <img
-                    src="/project-images/firma/Firma2.PNG"
+                    src={process.env.PUBLIC_URL + "/project-images/firma/Firma2.PNG"}
                     alt="Firma sin foto"
                   />
                 </div>

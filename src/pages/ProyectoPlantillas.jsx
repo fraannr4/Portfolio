@@ -100,7 +100,7 @@ function App() {
               <p>codigoProveedor</p>
             </div>
             <img
-              src="/project-images/extranet/flecha-verde.png"
+              src={process.env.PUBLIC_URL + "/project-images/extranet/flecha-verde.png"}
               alt="Flecha"
               className="flecha-horizontal"
             />
@@ -110,7 +110,7 @@ function App() {
               <p>idAdjunto</p>
             </div>
             <img
-              src="/project-images/extranet/flecha-verde.png"
+              src={process.env.PUBLIC_URL + "/project-images/extranet/flecha-verde.png"}
               alt="Flecha"
               className="flecha-horizontal"
             />
@@ -242,7 +242,7 @@ function App() {
               </div>
               <div className="implementacion-card-image">
                 <img
-                  src="/project-images/plantillas/plantillas_implementacion/manejoDatos.png"
+                  src={process.env.PUBLIC_URL + "/project-images/plantillas/plantillas_implementacion/manejoDatos.png"}
                   alt="Implementación de Proveedores Extranet"
                 />
               </div>
@@ -297,7 +297,7 @@ function App() {
 
               <div className="implementacion-card-image">
                 <img
-                  src="/project-images/plantillas/plantillas_implementacion/backend.png"
+                  src={process.env.PUBLIC_URL + "/project-images/plantillas/plantillas_implementacion/backend.png"}
                   alt="Implementación de Proveedores Extranet"
                 />
               </div>
@@ -363,7 +363,7 @@ function App() {
               </div>
               <div className="implementacion-card-image">
                 <img
-                  src="/project-images/plantillas/plantillas_implementacion/frontend.png"
+                  src={process.env.PUBLIC_URL + "/project-images/plantillas/plantillas_implementacion/frontend.png"}
                   alt="Implementación de Extranet"
                 />
               </div>
@@ -405,7 +405,7 @@ function App() {
               </div>
               <div className="implementacion-card-image">
                 <img
-                  src="/project-images/plantillas/plantillas_implementacion/funcionalidadesExtra.png"
+                  src={process.env.PUBLIC_URL + "/project-images/plantillas/plantillas_implementacion/funcionalidadesExtra.png"}
                   alt="Implementación de Extranet"
                 />
               </div>
@@ -418,42 +418,42 @@ function App() {
                 <div>
                   <h3>Proveedores List</h3>
                   <img
-                    src="/project-images/plantillas/proveedoresList.PNG"
+                    src={process.env.PUBLIC_URL + "/project-images/plantillas/proveedoresList.PNG"}
                     alt="Implementación de Dispositivos"
                   />
                 </div>
                 <div>
                   <h3>Dialog Tab Proveedor</h3>
                   <img
-                    src="/project-images/plantillas/detallesProveedor.PNG"
+                    src={process.env.PUBLIC_URL + "/project-images/plantillas/detallesProveedor.PNG"}
                     alt="Implementación de Dispositivos"
                   />
                 </div>
                 <div>
                   <h3>Dialog Tab Plantillas</h3>
                   <img
-                    src="/project-images/plantillas/plantillasList.PNG"
+                    src={process.env.PUBLIC_URL + "/project-images/plantillas/plantillasList.PNG"}
                     alt="Implementación de Dispositivos"
                   />
                 </div>
                 <div>
                   <h3>Infromación plantilla</h3>
                   <img
-                    src="/project-images/plantillas/plantilla_info.PNG"
+                    src={process.env.PUBLIC_URL + "/project-images/plantillas/plantilla_info.PNG"}
                     alt="Implementación de Dispositivos"
                   />
                 </div>
                 <div>
                   <h3>Creación Plantilla</h3>
                   <img
-                    src="/project-images/plantillas/plantillaNew.PNG"
+                    src={process.env.PUBLIC_URL + "/project-images/plantillas/plantillaNew.PNG"}
                     alt="Implementación de Dispositivos"
                   />
                 </div>
                 <div>
                   <h3>Edición Plantilla</h3>
                   <img
-                    src="/project-images/plantillas/plantilla_edit.PNG"
+                    src={process.env.PUBLIC_URL + "/project-images/plantillas/plantilla_edit.PNG"}
                     alt="Implementación de Dispositivos"
                   />
                 </div>

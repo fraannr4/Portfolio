@@ -180,7 +180,7 @@ function App() {
               </div>
               <div className="implementacion-card-image">
                 <img
-                  src="/project-images/extranet/manejoDeDatos.png"
+                  src={process.env.PUBLIC_URL +"/project-images/extranet/manejoDeDatos.png"}
                   alt="Implementación de Proveedores Extranet"
                 />
               </div>
@@ -230,7 +230,7 @@ function App() {
 
               <div className="implementacion-card-image">
                 <img
-                  src="/project-images/extranet/backend.png"
+                  src={process.env.PUBLIC_URL +"/project-images/extranet/backend.png"}
                   alt="Implementación de Proveedores Extranet"
                 />
               </div>
@@ -300,7 +300,7 @@ function App() {
               </div>
               <div className="implementacion-card-image">
                 <img
-                  src="/project-images/extranet/frontend.png"
+                  src={process.env.PUBLIC_URL +"/project-images/extranet/frontend.png"}
                   alt="Implementación de Extranet"
                 />
               </div>
@@ -336,7 +336,7 @@ function App() {
               </div>
               <div className="implementacion-card-image">
                 <img
-                  src="/project-images/extranet/funcionalidadesExtra.png"
+                  src={process.env.PUBLIC_URL + "/project-images/extranet/funcionalidadesExtra.png"}
                   alt="Implementación de Extranet"
                 />
               </div>
@@ -349,21 +349,21 @@ function App() {
                 <div>
                   <h3>Ficha Inicio</h3>
                   <img
-                    src="/project-images/extranet/ProveedoresExtranet/fichaInicio.PNG"
+                    src={process.env.PUBLIC_URL + "/project-images/extranet/ProveedoresExtranet/fichaInicio.PNG"}
                     alt="Implementación de Dispositivos"
                   />
                 </div>
                 <div>
                   <h3>Existencias</h3>
                   <img
-                    src="/project-images/extranet/ProveedoresExtranet/existencias.PNG"
+                    src={process.env.PUBLIC_URL + "/project-images/extranet/ProveedoresExtranet/existencias.PNG"}
                     alt="Implementación de Dispositivos"
                   />
                 </div>
                 <div>
                   <h3>Ventas</h3>
                   <img
-                    src="/project-images/extranet/ProveedoresExtranet/ventas.PNG"
+                    src={process.env.PUBLIC_URL + "/project-images/extranet/ProveedoresExtranet/ventas.PNG"}
                     alt="Implementación de Dispositivos"
                   />
                 </div>
