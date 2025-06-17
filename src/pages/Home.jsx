@@ -27,13 +27,6 @@ function App() {
       imagen: "project-images/proveedores_plantillas.png",
       ruta: "/proyecto/proveedoresPlantillas",
     },
-    {
-      id: 4,
-      titulo: "Firma Outlook",
-      descripcion: "Generación firma formato Outlook y copia",
-      imagen: "project-images/firma_outlook.png",
-      ruta: "/proyecto/firma",
-    },
   ];
 
   return (
@@ -53,7 +46,7 @@ function App() {
             </h3>
           </div>
           <div className="header-buttons">
-            <button>Ver mis Proyectos</button>
+            <button onClick={() => navigate("/Projects")}>Ver mis Proyectos</button>
             <button onClick={() => navigate("/Contact")}>Contactarme</button>
           </div>
         </div>
@@ -90,7 +83,7 @@ function App() {
         </div>
 
         <div className="projects" id="projects">
-          <h2 className="titulo-seccion">Proyectos</h2>
+          <h2 className="titulo-seccion">Proyectos Destacados</h2>
           <div className="projects-container">
             {proyectos.map((proyecto) => (
               <Link
@@ -111,6 +104,7 @@ function App() {
             ))}
           </div>
         </div>
+        <div className="separator"></div>
       </main>
     </div>
   );

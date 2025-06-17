@@ -5,7 +5,10 @@ import ProyectoDispositivos from "./pages/ProyectoDispositivos";
 import ProyectoExtranet from "./pages/ProyectoExtranet";
 import Footer from "./Footer";
 import ProyectoPlantillas from "./pages/ProyectoPlantillas";
-import Contact from "./pages/Contact"
+import ProyectoFirma from "./pages/ProyectoFirma";
+import Projects from "./pages/Projects";
+
+import Contact from "./pages/Contact";
 function App() {
   return (
     <>
@@ -24,10 +27,20 @@ function App() {
           path="/proyecto/proveedoresPlantillas"
           element={<ProyectoPlantillas />}
         />
-         <Route
-          path="/contact"
-          element={<Contact/>}
+        <Route 
+          path="/proyecto/FirmaOutlook" 
+          element={<ProyectoFirma />} 
         />
+
+        <Route 
+          path="/contact" 
+          element={<Contact />} 
+        />
+        <Route 
+          path="/projects" 
+          element={<Projects />} 
+        />
+
         {/* <Route path="/proyecto/extranet" element={<ProyectoExtranet />} />
       <Route path="/proyecto/plantillas" element={<ProyectoPlantillas />} />
       <Route path="/proyecto/firma" element={<ProyectoFirma />} /> */}
