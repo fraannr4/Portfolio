@@ -267,6 +267,7 @@ header {
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-decoration: none;
+  height: 350px;
 }
 
 .project-card:hover, .project-card-dark:hover {
