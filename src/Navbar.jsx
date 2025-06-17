@@ -7,7 +7,7 @@ function Navbar() {
       <div className="navbar">
         <div className="nav-left">
           <img
-            src="/icon/icon_fran.png"
+            src={process.env.PUBLIC_URL + "/icon/icon_fran.png"}
             alt="Francesco Romano's Avatar"
             className="avatar"
           />
